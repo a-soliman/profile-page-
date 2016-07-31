@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Login</title>
+		<link href="https://fonts.googleapis.com/css?family=Frijole" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+	</head>
+	<body>
+		<section>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-9">
+						<div class="form-wrapper">
+							<div class="intro">
+								<h1>Welcome,</h1>
+								<p>Please complete the form to rigister</p>
+							</div>
+							<form role="form" id="form" name="form">
+							  <div class="form-group name">
+							    <label for="firstname">First Name:</label>
+							    <input type="text" name="firstName" class="form-control" id="firstName">
+
+							    <label for="lastName">Last Name:</label>
+							    <input type="text" name="lastName" class="form-control" id="lastName">
+							  </div>
+							  <!-- Gender -->
+							  <div class="radio gender">
+								  <label><input type="radio" value="male" name="gender">Male</label>
+								
+								  <label><input type="radio" value="female" name="gender">Female</label>
+								</div>
+
+								<!--date of birth-->
+								<div class="dob">
+									<div class="form-group">
+									    <label for="sel1">Date Of Birth:</label>
+									    <p>MM/DD/YYYY</p>
+										<select class="form-control" name="month" id="month">
+										   
+										</select>
+
+										<!-- <label for="sel1">Day:</label> -->
+										<select class="form-control" name="day" id="day">
+										    
+										</select>
+										 <!-- <label for="sel1">year:</label> -->
+										<select class="form-control" name="year" id="year">
+										    
+										</select>
+									</div> <!-- form-group -->
+								</div> <!-- dob -->
+								
+								<!-- phone and mail -->
+								<div class="contacts">
+									<div class="form-group">
+									<!-- PHONE -->
+									  <label for="email">Email:</label>
+									  <input type="text" class="form-control" name="email" id="email">
+									<!-- PHONE -->
+									  <label for="phone">Phone:</label>
+									  <input type="number" class="form-control" name="phone" id="phone">
+									</div> 
+								</div> <!-- contacts -->
+
+							  <!-- bio -->
+							  	<div class="bio">
+							  		<div class="form-group">
+								 		<label for="bio">bio:</label>
+								  		<textarea class="form-control" name="bio" rows="5" id="bio"></textarea>
+									</div>
+								</div> <!-- bio -->
+
+								<!--Button-->
+								<div>
+									<button type="button" class="btn" id="rifister">Rigister</button>
+								</div>
+							</form>
+							<!--Ending the FORM-->
+
+							<!--Starting the output-->
+							<div id="output" class="output"></div>
+						</div> <!-- formwrapper -->
+					</div> <!-- col-12 -->
+					<aside class="col-md-3">
+						<div>this side for advertising</div>
+					</aside>
+				</div> <!-- row -->
+			</div> <!-- container -->
+		</section>
+		
+		<!-- ******Jquery GOOGLE CDN***** -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+		<script src="js/main.js"></script>
+	</body>
+</html>
