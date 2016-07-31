@@ -75,3 +75,15 @@
 #form .btn:focus {
 	border: 1px solid orangered;
 }
+
+@media(max-width: 650px) {
+	#form .form-group input,
+	#form .form-group select,
+	#form .form-group textarea {
+		width: 100%;
+	} 
+	#form .form-group #month,
+	#form .form-group #day,
+	#form .form-group #year {
+	width: unset;%;
+}
