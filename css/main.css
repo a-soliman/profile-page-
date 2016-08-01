@@ -1,4 +1,6 @@
-
+body {
+	background-color: black;
+}
 .form-wrapper, aside {
 	padding: 30px 20px;
     background: #272628;
@@ -76,6 +78,28 @@
 	border: 1px solid orangered;
 }
 
+/*OUTPUT SECTION*/
+.image-output, 
+.output {
+	margin-top: 30px;
+}
+.image-output {
+}
+.output img {
+	float: left;
+	margin-right: 50px;
+	width: 240px;
+	height: 240px;
+}
+.output h3, 
+.output p {
+	color: orange;
+}
+.output span {
+	font-size: 20px;
+	color: white;
+}
+
 @media(max-width: 650px) {
 	#form .form-group input,
 	#form .form-group select,
@@ -85,5 +109,9 @@
 	#form .form-group #month,
 	#form .form-group #day,
 	#form .form-group #year {
-	width: unset;%;
+	width: unset;
+	}
+	.output img {
+		float: none;
+	}
 }
