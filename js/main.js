@@ -77,6 +77,7 @@ function rigisterProfile() {
  	var output = document.getElementById('output')
 
  	//creating elements
+ 	var image = document.createElement('img')
  	var rigisteredName = document.createElement('h3')
  	var rigisteredGender = document.createElement('h3')
  	var rigisteredDob = document.createElement('h3')
@@ -84,15 +85,26 @@ function rigisterProfile() {
  	var rigisteredPhone = document.createElement('h3')
  	var rigisteredBio = document.createElement('p')
 
+ 	//adding source for the image
+ 	image.setAttribute('src', 'img/avatar.png')
+ 	// creating spans
+ 	var nameSpan = '<span>Username: </span>'
+ 	var genderSpan = '<span>Gender: </span>'
+ 	var dobSpan = '<span>Date of Birth: </span>'
+ 	var emailSpan = '<span>E-mail: </span>'
+ 	var phoneSpan = '<span>Phone: </span>'
+ 	var bioSpan = '<span>Bio: </span>'
+
  	//inner.html
- 	rigisteredName.innerHTML = 'Username: ' + userprofile.firstName
- 	rigisteredGender.innerHTML = 'Gender: ' + userprofile.gender
- 	rigisteredDob.innerHTML = 'Date of birth: ' + userprofile.dob
- 	rigisteredEmail.innerHTML = ' E-mail: ' + userprofile.email
- 	rigisteredPhone.innerHTML = 'Phone: ' + userprofile.phone
- 	rigisteredBio.innerHTML = 'Bio: ' +userprofile.bio
+ 	rigisteredName.innerHTML = nameSpan + userprofile.firstName
+ 	rigisteredGender.innerHTML = genderSpan + userprofile.gender
+ 	rigisteredDob.innerHTML = dobSpan + userprofile.dob
+ 	rigisteredEmail.innerHTML = emailSpan + userprofile.email
+ 	rigisteredPhone.innerHTML = phoneSpan + userprofile.phone
+ 	rigisteredBio.innerHTML = bioSpan +userprofile.bio
 
  	//appending the childs
+ 	output.appendChild(image)
  	output.appendChild(rigisteredName)
  	output.appendChild(rigisteredGender)
  	output.appendChild(rigisteredDob)
@@ -100,8 +112,11 @@ function rigisterProfile() {
  	output.appendChild(rigisteredPhone)
  	output.appendChild(rigisteredBio)
 
+ 	//hidding the form
+ 	document.getElementById("form").style.display = "none";
+
 
 }
 
-document.getElementById('rifister').addEventListener('click', rigisterProfile, false)
+document.getElementById('rigister').addEventListener('click', rigisterProfile, false)
 
