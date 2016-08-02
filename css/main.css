@@ -99,6 +99,19 @@ body {
 	font-size: 20px;
 	color: white;
 }
+.error {
+	margin-top: 10px;
+    color: orangered;
+    font-size: 19px;
+}
+footer {
+	text-align: center;
+	padding: 15px;
+	background-color: #272628;
+    color: white;
+    margin-top: 20px;
+    border-top: 1px solid orange;
+}
 
 @media(max-width: 650px) {
 	#form .form-group input,
@@ -113,5 +126,6 @@ body {
 	}
 	.output img {
 		float: none;
+
 	}
 }
