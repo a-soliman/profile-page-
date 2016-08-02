@@ -152,6 +152,9 @@ function rigisterProfile() {
  	//hidding the form
  	document.getElementById("form").style.display = "none";
 
+ 	//fixing the footer to the bottom
+ 	document.getElementById('footer').setAttribute('class', 'fixed')
+
 
 }
 
