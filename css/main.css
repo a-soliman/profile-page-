@@ -112,6 +112,13 @@ footer {
     margin-top: 20px;
     border-top: 1px solid orange;
 }
+footer a {
+	color: orange;
+}
+footer a:hover {
+	color: orangered;
+	text-decoration: none;
+}
 
 @media(max-width: 650px) {
 	#form .form-group input,
