@@ -55,7 +55,7 @@ body {
 #form .form-group #month,
 #form .form-group #day,
 #form .form-group #year {
-	width: 10%;
+	width: 15%;
 
 }
 #form .form-group option {
@@ -118,6 +118,11 @@ footer a {
 footer a:hover {
 	color: orangered;
 	text-decoration: none;
+}
+.fixed {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 
 @media(max-width: 650px) {
