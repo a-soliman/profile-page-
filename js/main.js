@@ -62,6 +62,39 @@ maxYears = 70
 function rigisterProfile() {
 
 
+	//Error output 
+	var errorOutput = document.getElementById('error')
+	//Error messages and RegEx
+	var errorMesGlobal = 'Please, fill out all the filds.'
+	var errorMail = 'Make sure your email address is correct.'
+	var errorPhone = 'Please enter vaild phone number of 10 digits.'
+	var regExMail = /^[a-z0-9._%-]+@[a-z0-9.-]+\.[a-z]{2,5}$/
+	var regExPhone = /^[0-9]{10}/
+
+
+	// an if statment to insure all the filds are entered
+	if (!form.firstName.value || !form.lastName.value || !form.gender.value || !form.email.value || !form.phone.value || !form.bio.value ) {
+		
+		errorOutput.innerHTML = errorMesGlobal
+		return
+	}
+	//check if the email is vaild 
+	if(!regExMail.test(form.email.value)) {
+		errorOutput.innerHTML = errorMail
+		return
+	}
+	//check if the email is vaild
+	if (!regExPhone.test(form.phone.value)) {
+		errorOutput.innerHTML = errorPhone
+		return
+	} 
+	//set the src attribute according to the gender
+	if (form.gender.value == 'male') {
+		imageSrc = 'img/avatar.png'
+	} else {
+		imageSrc = 'img/avatar-f.png'
+	}
+	//___________________________________________________________
 
 // creating an object 
  var userprofile = {
@@ -73,6 +106,8 @@ function rigisterProfile() {
  	phone: form.phone.value,
  	bio: form.bio.value
  }
+
+
 
  	var output = document.getElementById('output')
 
@@ -86,7 +121,7 @@ function rigisterProfile() {
  	var rigisteredBio = document.createElement('p')
 
  	//adding source for the image
- 	image.setAttribute('src', 'img/avatar.png')
+ 	image.setAttribute('src', imageSrc)
  	// creating spans
  	var nameSpan = '<span>Username: </span>'
  	var genderSpan = '<span>Gender: </span>'
@@ -100,7 +135,9 @@ function rigisterProfile() {
  	rigisteredGender.innerHTML = genderSpan + userprofile.gender
  	rigisteredDob.innerHTML = dobSpan + userprofile.dob
  	rigisteredEmail.innerHTML = emailSpan + userprofile.email
- 	rigisteredPhone.innerHTML = phoneSpan + userprofile.phone
+ 	rigisteredPhone.innerHTML = phoneSpan + userprofile.phone.replace(/[^\d]+/g, '')
+     .replace(/(\d{3})(\d{3})(\d{4})/, '($1) $2-$3')
+
  	rigisteredBio.innerHTML = bioSpan +userprofile.bio
 
  	//appending the childs
